@@ -5,3 +5,15 @@
 # TODO 1: importa pandas y carga data/ventas.csv en un DataFrame
 # TODO 2: imprime las dimensiones (filas, columnas) del DataFrame
 # TODO 3: imprime las primeras filas para revisar las columnas
+
+
+import pandas as pd
+ventas = pd.read_csv("data/ventas.csv")
+print(ventas.head())
+print("")
+#Ver dimensión me muestra filas y columnas
+print("La dimensión es de: ", ventas.shape)
+print("")
+#Muestra los tipos de columna
+print ("Tipos de columnas:")
+print (ventas.dtypes)
