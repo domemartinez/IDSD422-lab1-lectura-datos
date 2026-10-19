@@ -12,15 +12,13 @@
 import json
 import pandas as pd
 
-with open ("data/ventas.json", encoding="utf-8") as f:
+with open("data/ventas.json", encoding="utf-8") as f:
   datos = json.load(f)
 
-print(ventas.head())
-print("")
-#Ver dimensión me muestra filas y columnas
-print("La dimensión es de: ", ventas.shape)
-print("")
-#Muestra los tipos de columna
-print ("Tipos de columnas:")
+ventas = pd.json_normalize(datos)
+print (ventas.head())
+#imprimir las dimensiones
+print(ventas.shape)
+#imprimir los tipos de columna
+print ("\nTipos por columna")
 print (ventas.dtypes)
-
